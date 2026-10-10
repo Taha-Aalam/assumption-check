@@ -1,0 +1,13 @@
+{
+  "name": "assumption-check",
+  "description": "Shows the small guesses Claude made during a turn, so you can correct the ones it got wrong.",
+  "owner": {
+    "name": "Taha-Aalam"
+  },
+  "plugins": [
+    {
+      "name": "assumption-check",
+      "source": "./"
+    }
+  ]
+}

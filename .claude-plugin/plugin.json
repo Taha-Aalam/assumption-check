@@ -1,0 +1,7 @@
+{
+  "name": "assumption-check",
+  "version": "0.1.0",
+  "description": "Shows the small guesses Claude made during a turn.",
+  "author": { "name": "Taha-Aalam" },
+  "types": "./types/index.d.ts"
+}
