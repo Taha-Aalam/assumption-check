@@ -60,6 +60,9 @@ export const register: Register = on => {
       model: 'haiku',
       prompt: buildAssumePrompt(e.answer),
       system: 'You list assumptions as JSON. You answer with a JSON array only.',
+      // Without this the call has no deadline of its own and a stalled provider
+      // holds the whole turn open. It resolves `aborted` instead of hanging.
+      timeoutMs: 15_000,
     })
     if (!completion.isAnswered) return result
     const parsed: Assumption[] = parseAssumptions(completion.text, Number.isFinite(limit) ? limit : 5)
